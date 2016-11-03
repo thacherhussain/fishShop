@@ -1,0 +1,35 @@
+{
+  "name": "",
+  "version": "0.1.0",
+  "author": "",
+  "description": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "lint": "eslint --ext .js --ignore-pattern public",
+    "start": "brunch watch --server"
+  },
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-materialize": "^0.2.1",
+    "angular-ui-router": "^0.3.1",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0",
+    "normalize.css": "^4.2.0"
+  },
+  "devDependencies": {
+    "auto-reload-brunch": "^2.7.1",
+    "babel-brunch": "^6.0.6",
+    "babel-preset-es2015": "^6.14.0",
+    "brunch": "^2.8.2",
+    "clean-css-brunch": "^2.0.0",
+    "eslint": "^3.4.0",
+    "eslint-config-ryansobol": "^9.1.1",
+    "javascript-brunch": "^2.0.0",
+    "postcss-brunch": "^2.0.1",
+    "uglify-js-brunch": "^2.0.1"
+  }
+}

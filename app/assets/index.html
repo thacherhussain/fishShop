@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="my-app">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello world</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <link rel="stylesheet" href="/vendor.css">
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+<div class="page-flexbox-wrapper">
+  <nav>
+    <div class="blue darken-3 nav-wrapper">
+      <a href="#" class="brand-logo"></a>
+      <ul id="nav-mobile" class="left">
+        <li><a ui-sref="home">Home</a></li>
+        <li><a ui-sref="about">User</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- <header ng-include="'templates/nav.html'"></header> -->
+  <main>
+    <h1>Hello World</h1>
+      <div ui-view></div>
+  </main>
+  <!-- <footer ng-include="'templates/footer.html'"></footer> -->
+
+  <footer class="blue darken-3 page-footer">
+    <div class="footer-copyright">
+      <div class="container">
+        © 2016 Owl Post
+      </div>
+    </div>
+  </footer>
+</div>
+  <!-- JavaScript for: jQuery, angular, materialize, and angular-materialize. All of which are needed. -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+  <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script> -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.1.9/angular-materialize.min.js"></script> -->
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script> -->
+
+  <script src="/vendor.js"></script>
+  <script src="/app.js"></script>
+  <script>require('app');</script>
+</body>
+</html>

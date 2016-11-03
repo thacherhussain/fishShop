@@ -1,0 +1,12 @@
+body {
+  color: #333;
+}
+
+main {
+  flex: 1 0 auto;
+}
+.page-flexbox-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
