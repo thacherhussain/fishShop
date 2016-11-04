@@ -7,10 +7,14 @@ angular.module('my-app', [angularMaterialize, uiRouter])
     $stateProvider
       .state('home', {
         url: '',
-        templateUrl: 'views/main.html'
+        templateUrl: 'views/home.html'
       })
       .state('main', {
         url: '/',
-        templateUrl: 'views/main.html'
+        templateUrl: 'views/home.html'
+      })
+      .state('test', {
+        url: '/test',
+        templateUrl: 'views/test.html'
       });
   }]);
