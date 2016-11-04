@@ -13,8 +13,21 @@ angular.module('my-app', [angularMaterialize, uiRouter])
         url: '/',
         templateUrl: 'views/home.html'
       })
-      .state('test', {
-        url: '/test',
-        templateUrl: 'views/test.html'
+      .state('diagonalley', {
+        url: '/diagonalley',
+        templateUrl: 'views/diagonalley.html'
+      })
+      .state('user', {
+        url: '/user',
+        templateUrl: 'views/user/user.html'
+      })
+      .state('user.profile', {
+        url: '/profile',
+        templateUrl: 'views/user/profile.html'
+      })
+      .state('user.account', {
+        url: '/account',
+        templateUrl: 'views/user/account.html'
       });
+
   }]);
