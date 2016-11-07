@@ -13,9 +13,9 @@ angular.module('my-app', [angularMaterialize, uiRouter])
         url: '/',
         templateUrl: 'views/home.html',
       })
-      .state('diagonalley', {
-        url: '/diagonalley',
-        templateUrl: 'views/diagonalley.html'
+      .state('shops', {
+        url: '/shops',
+        templateUrl: 'views/shops.html'
       })
       .state('user', {
         url: '/user',
