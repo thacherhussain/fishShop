@@ -2,9 +2,11 @@ import angular from 'angular';
 import angularMaterialize from 'angular-materialize';
 import uiRouter from 'angular-ui-router';
 import CatalogCtrl from './controllers/catalog.controller';
+import CatalogService from './services/catalog.service'
 
 angular.module('my-app', [angularMaterialize, uiRouter])
   .controller('CatalogCtrl', CatalogCtrl)
+  .service('CatalogService', CatalogService)
   .config(['$stateProvider', ($stateProvider) => {
     $stateProvider
       .state('home', {
@@ -23,7 +25,7 @@ angular.module('my-app', [angularMaterialize, uiRouter])
         url: '/catalog',
         templateUrl: 'views/catalog.html',
         controller: 'CatalogCtrl',
-        controllerAs: 'catalogCtrl'
+        controllerAs: 'CatalogCtrl'
       })
       .state('user', {
         url: '/user',

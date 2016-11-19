@@ -21,6 +21,10 @@ switch (app.get('env')) {
   default:
 }
 
+const fish = require('./routes/fish');
+
+app.use(fish);
+
 // Expose public directory to client
 app.use(express.static(path.join(__dirname, 'public')));
 

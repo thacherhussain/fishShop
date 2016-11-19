@@ -1,8 +1,6 @@
 <h1>Catalog</h1>
-<div ng-repeat="fish in catalogCtrl.fishes">
+<div ng-repeat="fish in CatalogCtrl.getFishes() track by $index">
       <h2>{{fish.name}}</h2>
-      <p>
-        {{ fish.price | currency }}
-      </p>
+
       <a class="waves-effect waves-light btn" ng-click="catalog.addItem(fish)">Add to Cart</a>
     </div>
