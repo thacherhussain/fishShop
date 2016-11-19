@@ -4,7 +4,7 @@ class CatalogService {
     this.fishes = [];
 
     this.$http({
-      url: '/api/fishes',
+      url: '/api/fish',
       method: 'GET'
     }).then((res) => {
       this.fishes = res.data;

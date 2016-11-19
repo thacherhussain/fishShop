@@ -36,9 +36,9 @@ router.get('/api/fish/:id', (req, res, next) => {
         throw boom.create(404, 'Not Found');
       }
 
-      const camera = camelizeKeys(row);
+      const fish = camelizeKeys(row);
 
-      res.send(camera);
+      res.send(fish);
     })
     .catch((err) => {
       next(err);

@@ -58,7 +58,7 @@ router.get('/api/orders/:id', authorize, (req, res, next) => {
       order = camelizeKeys(row);
 
       return knex('order_items')
-        .innerJoin('fish', 'order_items.camera_id', 'fish.id')
+        .innerJoin('fish', 'order_items.fish_id', 'fish.id')
         .where('order_id', order.id);
     })
     .then((items) => {
@@ -103,7 +103,7 @@ router.post('/orders', authorize, (req, res, next) => {
         .insert(decamelizeKeys(items.map((item) => {
           return {
             orderId: order.id,
-            cameraId: item.cameraId,
+            fishId: item.fishId,
             quantity: item.quantity
           };
         })));

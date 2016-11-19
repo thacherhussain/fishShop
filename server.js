@@ -22,8 +22,14 @@ switch (app.get('env')) {
 }
 
 const fish = require('./routes/fish');
+const users = require('./routes/users');
+const orders = require('./routes/orders');
+const token = require('./routes/token');
 
 app.use(fish);
+app.use(users);
+app.use(orders);
+app.use(token);
 
 // Expose public directory to client
 app.use(express.static(path.join(__dirname, 'public')));
