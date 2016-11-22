@@ -8,7 +8,8 @@ class CartService {
       method: 'GET'
     }).then((res) => {
       this.cart = res.data;
-      console.log(res);
+
+      // console.log(res);
     }).catch((err) => {
       return err;
     });

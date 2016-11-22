@@ -9,8 +9,6 @@ class CatalogCtrl {
   getFishes() {
     return this.CatalogService.getFishes();
   }
-
-
 }
 
 CatalogCtrl.$inject = ['CatalogService'];

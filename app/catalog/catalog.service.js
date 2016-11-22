@@ -8,7 +8,8 @@ class CatalogService {
       method: 'GET'
     }).then((res) => {
       this.fishes = res.data;
-      console.log(res);
+
+      // console.log(res);
     }).catch((err) => {
       return err;
     });

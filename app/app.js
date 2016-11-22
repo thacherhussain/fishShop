@@ -1,22 +1,21 @@
-import angular from 'angular'
-import angularMaterialize from 'angular-materialize'
-import uiRouter from 'angular-ui-router'
+import angular from 'angular';
+import angularMaterialize from 'angular-materialize';
+import uiRouter from 'angular-ui-router';
 
-import AuthCtrl from './auth/auth.controller'
-import AuthService from './auth/auth.service'
+import AuthCtrl from './auth/auth.controller';
+import AuthService from './auth/auth.service';
 
-import CartCtrl from './cart/cart.controller'
-import CartService from './cart/cart.service'
+import CartCtrl from './cart/cart.controller';
+import CartService from './cart/cart.service';
 
-import CatalogCtrl from './catalog/catalog.controller'
-import CatalogService from './catalog/catalog.service'
+import CatalogCtrl from './catalog/catalog.controller';
+import CatalogService from './catalog/catalog.service';
 
-import OrdersCtrl from './orders/orders.controller'
-import OrdersService from './orders/orders.service'
+import OrdersCtrl from './orders/orders.controller';
+import OrdersService from './orders/orders.service';
 
-import SignUpCtrl from './signup/signup.controller'
-import SignUpService from './signup/signup.service'
-
+import SignUpCtrl from './signup/signup.controller';
+import SignUpService from './signup/signup.service';
 
 angular.module('my-app', [angularMaterialize, uiRouter])
   .service('AuthService', AuthService)
@@ -38,11 +37,11 @@ angular.module('my-app', [angularMaterialize, uiRouter])
     $stateProvider
       .state('home', {
         url: '',
-        templateUrl: 'views/home.html',
+        templateUrl: 'views/home.html'
       })
       .state('main', {
         url: '/',
-        templateUrl: 'views/home.html',
+        templateUrl: 'views/home.html'
       })
       .state('cart', {
         url: '/cart',
@@ -56,6 +55,7 @@ angular.module('my-app', [angularMaterialize, uiRouter])
         controller: 'CatalogCtrl',
         controllerAs: 'CatalogCtrl'
       })
+
       // .state('user', {
       //   url: '/user',
       //   templateUrl: 'views/user/user.html'
@@ -74,5 +74,4 @@ angular.module('my-app', [angularMaterialize, uiRouter])
         controller: 'OrdersCtrl',
         controllerAs: 'OrdersCtrl'
       });
-
   }]);
