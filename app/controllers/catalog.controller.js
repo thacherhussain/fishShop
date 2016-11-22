@@ -8,7 +8,6 @@ class CatalogCtrl {
 
   getFishes() {
     return this.CatalogService.getFishes();
-    console.log('added fish');
   }
 
 
