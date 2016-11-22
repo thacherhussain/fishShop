@@ -3,7 +3,21 @@
 
 @import '../_materialize-src/sass/materialize.scss';
 
-
+.brand-logo {
+  margin-left: 10px;
+}
 // body {
-//   color: #333;
+//   display: flex;
+//   min-height: 100vh;
+//   flex-direction: column;
 // }
+//
+// main {
+//   flex: 1 0 auto;
+// }
+footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   width:100%;
+}
