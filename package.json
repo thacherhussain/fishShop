@@ -9,11 +9,11 @@
     "url": ""
   },
   "scripts": {
-    "lint": "eslint --ext .js --ignore-pattern public",
-    "start": "brunch watch --server",
+    "heroku-postbuild": "brunch build --production; knex migrate:latest",
     "knex": "knex",
-    "heroku-postbuild": "knex migrate:latest",
-    "nodemon": "nodemon server.js"
+    "nodemon": "nodemon server.js",
+    "lint": "eslint --ext .js --ignore-pattern public",
+    "start": "brunch watch --server"
   },
   "dependencies": {
     "angular": "^1.5.8",
