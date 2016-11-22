@@ -10,7 +10,10 @@
   },
   "scripts": {
     "lint": "eslint --ext .js --ignore-pattern public",
-    "start": "brunch watch --server"
+    "start": "brunch watch --server",
+    "knex": "knex",
+    "heroku-postbuild": "knex migrate:latest",
+    "nodemon": "nodemon server.js"
   },
   "dependencies": {
     "angular": "^1.5.8",
@@ -41,5 +44,8 @@
     "javascript-brunch": "^2.0.0",
     "postcss-brunch": "^2.0.1",
     "uglify-js-brunch": "^2.0.1"
+  },
+  "engines": {
+    "node":"7.1.0"
   }
 }
