@@ -3,12 +3,17 @@ import angularMaterialize from 'angular-materialize'
 
 import uiRouter from 'angular-ui-router'
 
-import CatalogCtrl from './controllers/catalog.controller'
-import CatalogService from './services/catalog.service'
+import CatalogCtrl from './catalog/catalog.controller'
+import CatalogService from './catalog/catalog.service'
+
+import CartCtrl from './cart/cart.controller'
+import CartService from './cart/cart.service'
 
 angular.module('my-app', [angularMaterialize, uiRouter])
-  .controller('CatalogCtrl', CatalogCtrl)
   .service('CatalogService', CatalogService)
+  .service('CartService', CartService)
+  .controller('CatalogCtrl', CatalogCtrl)
+  .controller('CartCtrl', CartCtrl)
   .config(['$stateProvider', ($stateProvider) => {
     $stateProvider
       .state('home', {
@@ -19,9 +24,9 @@ angular.module('my-app', [angularMaterialize, uiRouter])
         url: '/',
         templateUrl: 'views/home.html',
       })
-      .state('shops', {
-        url: '/shops',
-        templateUrl: 'views/shops.html'
+      .state('cart', {
+        url: '/cart',
+        templateUrl: 'views/cart.html'
       })
       .state('catalog', {
         url: '/catalog',
