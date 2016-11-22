@@ -8,11 +8,17 @@ footer {
   margin-top: 100px;
   z-index: 1;
 }
-
+main {
+  margin: 5px 5% 100px 5%;
+}
 .brand-logo {
   margin-left: 10px;
 }
 
 .fishImage {
   height: 100px;
+}
+.heroImage {
+  height: 500px;
+  width: auto;
 }
