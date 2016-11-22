@@ -1,7 +1,9 @@
-import angular from 'angular';
-import angularMaterialize from 'angular-materialize';
-import uiRouter from 'angular-ui-router';
-import CatalogCtrl from './controllers/catalog.controller';
+import angular from 'angular'
+import angularMaterialize from 'angular-materialize'
+
+import uiRouter from 'angular-ui-router'
+
+import CatalogCtrl from './controllers/catalog.controller'
 import CatalogService from './services/catalog.service'
 
 angular.module('my-app', [angularMaterialize, uiRouter])
