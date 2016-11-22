@@ -1,23 +1,18 @@
-// @import '../_scss/base';
-// @import '../_scss/variables';
-
 @import '../_materialize-src/sass/materialize.scss';
+
+footer {
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  width:100%;
+  margin-top: 100px;
+  z-index: 1;
+}
 
 .brand-logo {
   margin-left: 10px;
 }
-// body {
-//   display: flex;
-//   min-height: 100vh;
-//   flex-direction: column;
-// }
-//
-// main {
-//   flex: 1 0 auto;
-// }
-footer {
-   position:fixed;
-   left:0px;
-   bottom:0px;
-   width:100%;
+
+.fishImage {
+  height: 100px;
 }
