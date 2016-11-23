@@ -9,7 +9,7 @@ footer {
   z-index: 1;
 }
 main {
-  margin: 5px 5% 100px 5%;
+  margin: 10px 5% 90px 5%;
 }
 .brand-logo {
   margin-left: 10px;
@@ -18,7 +18,16 @@ main {
 .fishImage {
   height: 100px;
 }
-.heroImage {
+.hero {
   height: 500px;
-  width: auto;
+  background: url(http://www.3riversresort.com/wp-content/uploads/2015/10/Fly-Fishing-Gunnison-River-2.jpg);
+}
+.homeButton {
+  margin: 400px 0px 0px 0px;
+  text-align: center;
+}
+.photoCredit {
+  margin-top: 3px;
+  font-size: 10px;
+  text-align: right;
 }
