@@ -80,7 +80,7 @@ exports.seed = function(knex) {
       {
         id: 10,
         name: 'Charlie',
-        image: 'https://s-media-cache-ak0.pinimg.com/originals/ce/9e/6b/ce9e6b264784d5910d8f1959b086509d.png',
+        image: 'http://starkist.com/sites/default/files/featuredImages/page/SK_FeatureCard_Blank.jpg',
         rating: 2,
         price: 3.99,
         on_sale: true
