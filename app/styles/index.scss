@@ -16,7 +16,8 @@ main {
 }
 
 .fishImage {
-  height: 100px;
+  height: 150px;
+  width: 250px;
 }
 .hero {
   height: 500px;
@@ -30,4 +31,7 @@ main {
   margin-top: 3px;
   font-size: 10px;
   text-align: right;
+}
+.catalogButton {
+  text-align: center;
 }
