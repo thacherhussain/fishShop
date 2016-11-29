@@ -77,6 +77,30 @@ exports.seed = function(knex) {
         price: 124.95,
         on_sale: false
       },
+      {
+        id: 10,
+        name: 'Charlie',
+        image: 'https://s-media-cache-ak0.pinimg.com/originals/ce/9e/6b/ce9e6b264784d5910d8f1959b086509d.png',
+        rating: 2,
+        price: 3.99,
+        on_sale: true
+      },
+      {
+        id: 11,
+        name: 'Flounder',
+        image: 'https://s-media-cache-ak0.pinimg.com/originals/64/0d/07/640d07415163503480f47ac2bf8592e6.png',
+        rating: 5,
+        price: 1000.87,
+        on_sale: false
+      },
+      {
+        id: 12,
+        name: 'Swordfish',
+        image: 'http://floridakeysswordfishing.com/fishing_catch_photos/2014/11/111415-swordfish.jpg',
+        rating: 2,
+        price: 34.90,
+        on_sale: false
+      }
     ]);
     })
     .then(() => {
