@@ -73,5 +73,10 @@ angular.module('my-app', [angularMaterialize, uiRouter])
         templateUrl: 'views/orders.html',
         controller: 'OrdersCtrl',
         controllerAs: 'OrdersCtrl'
-      });
+      })
+      .state('thanks', {
+        url: '/thanks',
+        templateUrl: 'views/thanks.html',
+      })
+      ;
   }]);

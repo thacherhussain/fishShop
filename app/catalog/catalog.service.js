@@ -8,7 +8,9 @@ class CatalogService {
       method: 'GET'
     }).then((res) => {
       this.fishes = res.data;
-
+      this.fishes.forEach((fish) => {
+        fish.price = parseFloat(fish.price)
+      })
       // console.log(res);
     }).catch((err) => {
       return err;

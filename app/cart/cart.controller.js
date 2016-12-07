@@ -1,11 +1,21 @@
 class CartCtrl {
-  constructor(CartService) {
-    this.CartService = CartService;
-    this.cart = [];
+  constructor(cartService) {
+    this.cartService = cartService;
   }
-
-  getCart() {
-    return this.CartService.getCart();
+  items() {
+    return this.cartService.items;
+  }
+  cartCount() {
+    return this.cartService.items.length;
+  }
+  subtotal() {
+    return this.cartService.subtotal();
+  }
+  taxes() {
+    return this.cartService.taxes();
+  }
+  total() {
+    return this.CartService.total();
   }
 }
 

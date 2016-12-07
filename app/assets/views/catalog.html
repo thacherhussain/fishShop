@@ -1,27 +1,23 @@
 <div class="row">
-  <div class="col s12 m6 l4 catalogButton" ng-repeat="fish in CatalogCtrl.getFishes() track by $index">
+  <div class="input-field col s12 m6">
+    <input type="search" placeholder="Search" ng-model="CatalogCtrl.search">
+  </div>
+  <div class="input-field col s12 m6">
+    <select ng-model="CatalogCtrl.sortBy" material-select watch>
+      <option value="name">Name</option>
+      <option value="price">Price</option>
+    </select>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12 m6 l4 catalogButton" ng-repeat="fish in CatalogCtrl.getFishes() | filter: { name: CatalogCtrl.search } | orderBy: CatalogCtrl.sortBy">
       <h4>{{fish.name}}</h4>
-      <img class="fishImage" src="{{fish.image}}" alt="" />
+      <img class="fishImage" src="{{ fish.image }}" alt="" />
+      <p>{{ fish.price | currency }}</p>
+      <p>Rating: {{ fish.rating }}</p>
       <p>
-        <a class="waves-effect waves-light btn" ng-click="catalog.addItem(fish)">Add to Cart</a>
+        <a class="waves-effect waves-light btn" ng-click="CatalogCtrl.addItem(fish)">Add to Cart</a>
       </p>
     </div>
 </div>
-
-<!-- <div class="row">
-  <div class="col s12 m6 l4" ng-repeat="fish in CatalogCtrl.getFishes() track by $index">
-    <div class="card">
-      <div class="card-image">
-        <img class="fishImage" src="{{fish.image}}">
-        <span class="card-title">{{fish.name}}</span>
-      </div>
-      <div class="card-content">
-        <p>I am a very simple card. I am good at containing small bits of information.
-        I am convenient because I require little markup to use effectively.</p>
-      </div>
-      <div class="card-action">
-        <a href="#">This is a link</a>
-      </div>
-    </div>
-  </div>
-</div> -->
