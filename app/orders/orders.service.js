@@ -2,7 +2,6 @@ class OrdersService {
   constructor($http) {
     this.$http = $http;
     this.cart = [];
-
     this.$http({
       url: '/api/cart',
       method: 'GET'
@@ -14,8 +13,17 @@ class OrdersService {
       return err;
     });
   }
-  getOrders() {
-    return this.cart;
+  // getOrders() {
+  //   return this.cart;
+  // }
+  checkout(items, firstName, lastName, address1, address2, city, state, zip) {
+    return this.$http.post('/orders', { items, firstName, lastName, address1, address2, city, state, zip })
+    .then((res) => {
+      return res.data;
+    })
+    .catch((err) => {
+      console.log('fail');
+    });
   }
 }
 

@@ -1,18 +1,18 @@
-class CartCtrl {
-  constructor(cartService) {
-    this.cartService = cartService;
+  class CartCtrl {
+  constructor(CartService) {
+    this.CartService = CartService;
   }
   items() {
-    return this.cartService.items;
+    return this.CartService.items;
   }
   cartCount() {
-    return this.cartService.items.length;
+    return this.CartService.items.length;
   }
   subtotal() {
-    return this.cartService.subtotal();
+    return this.CartService.subtotal();
   }
   taxes() {
-    return this.cartService.taxes();
+    return this.CartService.taxes();
   }
   total() {
     return this.CartService.total();

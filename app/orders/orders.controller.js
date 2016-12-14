@@ -1,13 +1,41 @@
 class OrdersCtrl {
-  constructor(OrdersService) {
+  constructor(CartService, OrdersService) {
+    this.CartService = CartService;
     this.OrdersService = OrdersService;
-    this.cart = [];
+    this.items = this.CartService.items;
+    // this.cart = [];
+    this.firstName = '';
+    this.lastName = '';
+    this.address1 = '';
+    this.address2 = '';
+    this.city = '';
+    this.state = '';
+    this.zip = '';
   }
-  getOrders() {
-    return this.OrdersService.getOrders();
+  // getOrders() {
+  //   return this.OrdersService.getOrders();
+  // }
+
+  items() {
+    return this.CartService.items;
+  }
+  cartCount() {
+    return this.CartService.items.length;
+  }
+  subtotal() {
+    return this.CartService.subtotal();
+  }
+  taxes() {
+    return this.CartService.taxes();
+  }
+  total() {
+    return this.CartService.total();
+  }
+  checkout(items, firstName, lastName, address1, address2, city, state, zip) {
+    this.OrdersService.checkout(this.items, this.firstName, this.lastName, this.address1, this.address2, this.city, this.state, this.zip);
   }
 }
 
-OrdersCtrl.$inject = ['OrdersService'];
+OrdersCtrl.$inject = ['CartService', 'OrdersService'];
 
 export default OrdersCtrl;

@@ -17,7 +17,7 @@ class CartService {
   subtotal() {
     let cartSubtotal = 0;
     for (let i = 0; i < this.items.length; i++) {
-      cartSubtotal = this.items[i].price * this.items[i].quantity;
+      cartSubtotal += this.items[i].price * this.items[i].quantity;
     }
     return cartSubtotal;
   }

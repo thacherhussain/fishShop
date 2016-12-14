@@ -1,6 +1,6 @@
 class CatalogCtrl {
-  constructor(cartService, CatalogService) {
-    this.cartService = cartService;
+  constructor(CartService, CatalogService) {
+    this.CartService = CartService;
     this.CatalogService = CatalogService;
     this.fishOrder = [];
     this.search = '';
@@ -12,7 +12,7 @@ class CatalogCtrl {
   }
   addItem(item) {
     Materialize.toast('Added to cart', 2000);
-    this.cartService.addToCart(item);
+    this.CartService.addToCart(item);
     this.fishOrder.push(item);
     // console.log(this.fishOrder);
   }

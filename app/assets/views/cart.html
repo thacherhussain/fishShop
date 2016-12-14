@@ -1,4 +1,8 @@
 <h2>Cart</h2>
+<div ng-hide="CartCtrl.total()">
+  <h4>No Items Yet!</h4>
+</div>
+<div ng-show="CartCtrl.total()">
 <div class="row">
   <div class="col s12 m6">
     <table>
@@ -16,6 +20,14 @@
 </div>
 <div class="row">
   <div class="col s12 m6">
-    <a class="waves-effect waves-light btn" ui-sref="thanks"></a>
+      <p>{{ CartCtrl.subtotal() | currency }}</p>
+      <p>{{ CartCtrl.taxes() | currency }}</p>
+      <p>{{ CartCtrl.total() | currency }}</p>
   </div>
+</div>
+<div class="row">
+  <div class="col s12 m6">
+    <a class="waves-effect waves-light btn" ui-sref="thanks">Checkout</a>
+  </div>
+</div>
 </div>
