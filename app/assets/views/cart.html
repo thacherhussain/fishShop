@@ -10,24 +10,27 @@
       <th>Quantity</th>
       <th>Price</th>
       <tr ng-repeat="item in CartCtrl.items() track by $index">
+        <!-- <img class="cartImage" src="{{ item.image }}" alt="" /> -->
         <td>{{ item.name }}</td>
         <td>{{ item.quantity }}</td>
         <td>{{ item.price | currency }}</td>
-        <!-- <img class="cartImage" src="{{ item.image }}" alt="" /> -->
       </tr>
     </table>
   </div>
 </div>
 <div class="row">
   <div class="col s12 m6">
-      <p>{{ CartCtrl.subtotal() | currency }}</p>
-      <p>{{ CartCtrl.taxes() | currency }}</p>
-      <p>{{ CartCtrl.total() | currency }}</p>
+      <p><strong>Subtotal:</strong> {{ CartCtrl.subtotal() | currency }}</p>
+      <p><strong>Tax:</strong> {{ CartCtrl.taxes() | currency }}</p>
+      <p><strong>Total:</strong> {{ CartCtrl.total() | currency }}</p>
   </div>
 </div>
 <div class="row">
   <div class="col s12 m6">
-    <a class="waves-effect waves-light btn" ui-sref="thanks">Checkout</a>
+    <a class="waves-effect waves-light btn" ui-sref="checkout">Checkout As Guest</a>
+  </div>
+  <div class="col s12 m6">
+    <a class="waves-effect waves-light btn" ui-sref="login">Login</a>
   </div>
 </div>
 </div>

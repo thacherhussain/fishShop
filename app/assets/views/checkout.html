@@ -1,0 +1,55 @@
+<h4>Checkout</h4>
+
+<div class="row">
+    <form action="/orders" method="post" class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="first_name" type="text" ng-model="OrdersCtrl.firstName">
+          <label>First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" type="text" ng-model="OrdersCtrl.lastName">
+          <label>Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="text" ng-model="OrdersCtrl.address1">
+          <label>Address</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="text" ng-model="OrdersCtrl.address2">
+          <label>Apt/Unit</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input type="text" ng-model="OrdersCtrl.city">
+          <label>City</label>
+        </div>
+        <div class="input-field col s2">
+          <input type="text" ng-model="OrdersCtrl.state">
+          <label>State</label>
+        </div>
+        <div class="input-field col s4">
+          <input type="text" ng-model="OrdersCtrl.zip">
+          <label>Zip</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6">
+          <a class="waves-effect waves-light btn" ng-click="OrdersCtrl.checkout()">Place Order</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6">
+          <a class="waves-effect waves-light btn" ui-sref="thanks">To Thanks Page</a>
+        </div>
+      </div>
+      <div>
+        <button class="waves-effect waves-light btn" type="submit">Submit Button</button>
+      </div>
+    </form>
+  </div>

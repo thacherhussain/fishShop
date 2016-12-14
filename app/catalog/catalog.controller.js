@@ -14,7 +14,6 @@ class CatalogCtrl {
     Materialize.toast('Added to cart', 2000);
     this.CartService.addToCart(item);
     this.fishOrder.push(item);
-    // console.log(this.fishOrder);
   }
 }
 

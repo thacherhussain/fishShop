@@ -3,7 +3,6 @@ class OrdersCtrl {
     this.CartService = CartService;
     this.OrdersService = OrdersService;
     this.items = this.CartService.items;
-    // this.cart = [];
     this.firstName = '';
     this.lastName = '';
     this.address1 = '';
@@ -12,9 +11,6 @@ class OrdersCtrl {
     this.state = '';
     this.zip = '';
   }
-  // getOrders() {
-  //   return this.OrdersService.getOrders();
-  // }
 
   items() {
     return this.CartService.items;
