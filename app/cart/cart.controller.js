@@ -17,6 +17,9 @@
   total() {
     return this.CartService.total();
   }
+  clearCart() {
+    return this.CartService.clearCart();
+  }
 }
 
 CartCtrl.$inject = ['CartService'];

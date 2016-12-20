@@ -38,6 +38,9 @@ class CartService {
     }
     return null;
   }
+  clearCart() {
+    this.items = [];
+  }
 }
 
 export default CartService;

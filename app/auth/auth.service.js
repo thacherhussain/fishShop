@@ -1,24 +1,43 @@
 class AuthService {
-  constructor($http) {
+  constructor($http, $state) {
     this.$http = $http;
-    this.cart = [];
+    this.state = $state;
+    this.signedIn = false;
 
-    this.$http({
-      url: '/api/cart',
-      method: 'GET'
-    }).then((res) => {
-      this.cart = res.data;
-
-      // console.log(res);
-    }).catch((err) => {
-      return err;
+    this.$http.get('/api/token')
+    .then((res) => {
+      this.signedIn = res.data;
+    })
+    .catch((err) => {
+  return err;
     });
   }
-  getAuth() {
-    return this.cart;
+
+  signIn(email, password) {
+    return this.$http.post('/api/token', { email, password })
+      .then(() => {
+        this.signedIn = true;
+        this.$state.go('catalog');
+      })
+      .catch((err) => {
+        return err;
+      });
+  }
+  signOut() {
+    return this.$http.delete('/api/token')
+      .then(() => {
+        this.signedIn = false;
+        this.$state.go('home');
+      })
+      .catch((err) => {
+        return err;
+      });
+  }
+  userIsSignedIn() {
+    return this.signedIn;
   }
 }
 
-AuthService.$inject = ['$http'];
+AuthService.$inject = ['$http', '$state'];
 
 export default AuthService;

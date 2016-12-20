@@ -23,6 +23,7 @@ class OrdersService {
       console.log('fail');
     });
   }
+  
 }
 
 OrdersService.$inject = ['$http'];

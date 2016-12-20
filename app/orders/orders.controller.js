@@ -30,6 +30,9 @@ class OrdersCtrl {
   checkout(items, firstName, lastName, address1, address2, city, state, zip) {
     this.OrdersService.checkout(this.items, this.firstName, this.lastName, this.address1, this.address2, this.city, this.state, this.zip);
   }
+  clearCart() {
+    return this.CartService.clearCart();
+  }
 }
 
 OrdersCtrl.$inject = ['CartService', 'OrdersService'];

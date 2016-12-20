@@ -84,5 +84,17 @@ angular.module('my-app', [angularMaterialize, uiRouter])
         url: '/thanks',
         templateUrl: 'views/thanks.html'
       })
+      .state('signIn', {
+        url: '/signIn',
+        templateUrl: 'views/signIn.html',
+        controller: 'AuthCtrl',
+        controllerAs: 'AuthCtrl'
+      })
+      .state('signUp', {
+        url: '/signUp',
+        templateUrl: 'views/signUp.html',
+        controller: 'AuthCtrl',
+        controllerAs: 'AuthCtrl'
+      })
       ;
   }]);

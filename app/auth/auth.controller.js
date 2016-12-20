@@ -1,11 +1,17 @@
 class AuthCtrl {
   constructor(AuthService) {
     this.AuthService = AuthService;
-    this.cart = [];
+    this.email = '';
+    this.password = '';
   }
-
-  getAuth() {
-    return this.AuthService.getAuth();
+  isSignedIn() {
+    return this.AuthService.isSignedIn();
+  }
+  signIn(email, password) {
+    return this.AuthService.signIn(this.email, this.password);
+  }
+  signOut() {
+    return this.AuthService.signOut();
   }
 }
 
