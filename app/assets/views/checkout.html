@@ -1,20 +1,26 @@
 <h4>Checkout</h4>
 
 <div class="row">
-    <form action="/orders" method="post" class="col s12">
+    <form action="http://localhost:8000/thanks.html" method="post" class="col s12">
       <div class="row">
         <div class="input-field col s6">
-          <input id="first_name" type="text">
+          <input id="first_name" type="text" class="validate" required>
           <label>First Name</label>
         </div>
         <div class="input-field col s6">
-          <input id="last_name" type="text">
+          <input id="last_name" type="text" class="validate" required>
           <label>Last Name</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input type="text">
+          <input id="email" type="email" class="validate" required>
+          <label for="email" data-error="Please enter a valid email.">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="text" class="validate" required>
           <label>Address</label>
         </div>
       </div>
@@ -26,22 +32,83 @@
       </div>
       <div class="row">
         <div class="input-field col s6">
-          <input type="text">
+          <input type="text" class="validate" required>
           <label>City</label>
         </div>
-        <div class="input-field col s2">
-          <input type="text">
+        <div class="input-field col s2" required>
+          <select>
+            <option value="AL">AL</option>
+            <option value="AK">AK</option>
+            <option value="AZ">AZ</option>
+            <option value="AR">AR</option>
+            <option value="CA">CA</option>
+            <option value="CO">CO</option>
+            <option value="CT">CT</option>
+            <option value="DE">DE</option>
+            <option value="FL">FL</option>
+            <option value="GA">GA</option>
+            <option value="HI">HI</option>
+            <option value="ID">ID</option>
+            <option value="IL">IL</option>
+            <option value="IL">IL</option>
+            <option value="IN">IN</option>
+            <option value="IA">IA</option>
+            <option value="KS">KS</option>
+            <option value="KY">KY</option>
+            <option value="LA">LA</option>
+            <option value="ME">ME</option>
+            <option value="MD">MD</option>
+            <option value="MA">MA</option>
+            <option value="MI">MI</option>
+            <option value="MN">MN</option>
+            <option value="MS">MS</option>
+            <option value="MO">MO</option>
+            <option value="MT">MT</option>
+            <option value="NE">NE</option>
+            <option value="NV">NV</option>
+            <option value="NH">NH</option>
+            <option value="NJ">NJ</option>
+            <option value="NM">NM</option>
+            <option value="NY">NY</option>
+            <option value="NC">NC</option>
+            <option value="ND">ND</option>
+            <option value="OH">OH</option>
+            <option value="OK">OK</option>
+            <option value="OR">OR</option>
+            <option value="PA">PA</option>
+            <option value="RI">RI</option>
+            <option value="SC">SC</option>
+            <option value="SD">SD</option>
+            <option value="TN">TN</option>
+            <option value="TX">TX</option>
+            <option value="UT">UT</option>
+            <option value="VT">VT</option>
+            <option value="VA">VA</option>
+            <option value="WA">WA</option>
+            <option value="WV">WV</option>
+            <option value="WI">WI</option>
+            <option value="WY">WY</option>
+            <option value="GU">GU</option>
+            <option value="PR">PR</option>
+            <option value="VI">VI</option>
+          </select>
           <label>State</label>
         </div>
         <div class="input-field col s4">
-          <input type="text">
+          <input type="number" class="validate" required>
           <label>Zip</label>
         </div>
       </div>
       <div class="row">
-        <div class="col s12 m6">
+        <div class="col s12 m6" required>
           <a class="waves-effect waves-light btn" ng-click="CartCtrl.clearCart()" ui-sref="thanks">Place Order</a>
         </div>
       </div>
     </form>
   </div>
+
+<script>
+  $(document).ready(function() {
+  $('select').material_select();
+  });
+</script>

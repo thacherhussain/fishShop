@@ -1,20 +1,28 @@
 <h2>Cart</h2>
-<div ng-hide="CartCtrl.total()">
-  <h4>No Items Yet!</h4>
+<div class="center-align" ng-hide="CartCtrl.total()">
+  <img class="fishButton" src="../NoFish.png" alt="">
+  <div>
+    <a class="waves-effect waves-light btn-large" ui-sref="catalog">Take me to the fish!</a>
+  </div>
 </div>
 <div ng-show="CartCtrl.total()">
 <div class="row">
   <div class="col s12 m6">
-    <table>
-      <th>Name</th>
-      <th>Quantity</th>
-      <th>Price</th>
-      <tr ng-repeat="item in CartCtrl.items() track by $index">
-        <!-- <img class="cartImage" src="{{ item.image }}" alt="" /> -->
-        <td>{{ item.name }}</td>
-        <td>{{ item.quantity }}</td>
-        <td>{{ item.price | currency }}</td>
-      </tr>
+    <table class="bordered striped centered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="item in CartCtrl.items() track by $index">
+          <td>{{ item.name }}</td>
+          <td>{{ item.quantity }}</td>
+          <td>{{ item.price | currency }}</td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </div>
@@ -28,5 +36,8 @@
 <div class="row">
   <div class="col s12 m4">
     <a class="waves-effect waves-light btn" ui-sref="checkout">Checkout</a>
+  </div>
+  <div class="col s12 m4">
+    <a class="waves-effect waves-light btn" ui-sref="catalog">Take me back to the fish!</a>
   </div>
 </div>
