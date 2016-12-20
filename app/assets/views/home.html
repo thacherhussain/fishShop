@@ -12,5 +12,28 @@
   <p class="photoCredit">
     Photo Credit: Three Rivers Resort, Almont, CO - Fishing on Gunnison River
   </p>
+</div>
 
+<div class="row">
+  <div class="input-field col s12 m6">
+    <input type="search" placeholder="Search" ng-model="CatalogCtrl.search">
+  </div>
+  <div class="input-field col s12 m6">
+    <select ng-model="CatalogCtrl.sortBy" material-select watch>
+      <option value="name">Name</option>
+      <option value="price">Price</option>
+    </select>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12 m6 l4 catalogButton" ng-repeat="fish in CatalogCtrl.getFishes() | filter: { name: CatalogCtrl.search } | orderBy: CatalogCtrl.sortBy">
+    <h4>{{fish.name}}</h4>
+    <img class="fishImage" src="{{ fish.image }}" alt="" />
+    <p>{{ fish.price | currency }}</p>
+    <p>Rating: {{ fish.rating }}</p>
+    <p>
+      <a class="waves-effect waves-light btn" ng-click="CatalogCtrl.addItem(fish)">Add to Cart</a>
+    </p>
+  </div>
 </div>

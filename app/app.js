@@ -37,7 +37,9 @@ angular.module('my-app', [angularMaterialize, uiRouter])
     $stateProvider
       .state('home', {
         url: '',
-        templateUrl: 'views/home.html'
+        templateUrl: 'views/home.html',
+        controller: 'CatalogCtrl',
+        controllerAs: 'CatalogCtrl'
       })
       .state('main', {
         url: '/',
