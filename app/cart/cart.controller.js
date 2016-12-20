@@ -18,7 +18,11 @@
     return this.CartService.total();
   }
   clearCart() {
+    console.log('from controller');
     return this.CartService.clearCart();
+  }
+  log() {
+    console.log('from controller');
   }
 }
 

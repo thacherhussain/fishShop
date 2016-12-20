@@ -47,8 +47,8 @@ angular.module('my-app', [angularMaterialize, uiRouter])
       .state('checkout', {
         url: '/checkout',
         templateUrl: 'views/checkout.html',
-        controller: 'CatalogCtrl',
-        controllerAs: 'CatalogCtrl'
+        controller: 'CartCtrl',
+        controllerAs: 'CartCtrl'
       })
       .state('thanks', {
         url: '/thanks',

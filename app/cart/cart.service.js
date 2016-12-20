@@ -39,7 +39,8 @@ class CartService {
     return null;
   }
   clearCart() {
-    this.items = [];
+    console.log('from service');
+    return this.items = [];
   }
 }
 
