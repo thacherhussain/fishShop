@@ -4,52 +4,44 @@
     <form action="/orders" method="post" class="col s12">
       <div class="row">
         <div class="input-field col s6">
-          <input id="first_name" type="text" ng-model="OrdersCtrl.firstName">
+          <input id="first_name" type="text">
           <label>First Name</label>
         </div>
         <div class="input-field col s6">
-          <input id="last_name" type="text" ng-model="OrdersCtrl.lastName">
+          <input id="last_name" type="text">
           <label>Last Name</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input type="text" ng-model="OrdersCtrl.address1">
+          <input type="text">
           <label>Address</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input type="text" ng-model="OrdersCtrl.address2">
+          <input type="text">
           <label>Apt/Unit</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s6">
-          <input type="text" ng-model="OrdersCtrl.city">
+          <input type="text">
           <label>City</label>
         </div>
         <div class="input-field col s2">
-          <input type="text" ng-model="OrdersCtrl.state">
+          <input type="text">
           <label>State</label>
         </div>
         <div class="input-field col s4">
-          <input type="text" ng-model="OrdersCtrl.zip">
+          <input type="text">
           <label>Zip</label>
         </div>
       </div>
-      <!-- <div class="row">
-        <div class="col s12 m6">
-          <a class="waves-effect waves-light btn" ng-click="OrdersCtrl.checkout()">Place Order</a>
-        </div>
-      </div> -->
       <div class="row">
         <div class="col s12 m6">
-          <a class="waves-effect waves-light btn" ng-click="OrdersCtrl.clearCart()" ui-sref="thanks">Place Guest Order</a>
+          <a class="waves-effect waves-light btn" ng-click="CartCtrl.clearCart()" ui-sref="thanks">Place Guest Order</a>
         </div>
       </div>
-      <!-- <div>
-        <button class="waves-effect waves-light btn" type="submit">Submit Button</button>
-      </div> -->
     </form>
   </div>
