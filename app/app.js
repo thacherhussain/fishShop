@@ -8,7 +8,6 @@ import CartService from './cart/cart.service';
 import CatalogCtrl from './catalog/catalog.controller';
 import CatalogService from './catalog/catalog.service';
 
-
 angular.module('my-app', [angularMaterialize, uiRouter])
 
   .controller('CartCtrl', CartCtrl)
@@ -16,7 +15,6 @@ angular.module('my-app', [angularMaterialize, uiRouter])
 
   .service('CatalogService', CatalogService)
   .controller('CatalogCtrl', CatalogCtrl)
-
 
   .config(['$stateProvider', ($stateProvider) => {
     $stateProvider

@@ -9,9 +9,8 @@ class CatalogService {
     }).then((res) => {
       this.fishes = res.data;
       this.fishes.forEach((fish) => {
-        fish.price = parseFloat(fish.price)
-      })
-      // console.log(res);
+        fish.price = parseFloat(fish.price);
+      });
     }).catch((err) => {
       return err;
     });

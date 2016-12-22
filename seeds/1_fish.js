@@ -100,8 +100,7 @@ exports.seed = function(knex) {
         rating: 2,
         price: 34.90,
         on_sale: false
-      }
-    ]);
+      }]);
     })
     .then(() => {
       return knex.raw(

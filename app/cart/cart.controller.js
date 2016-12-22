@@ -1,4 +1,4 @@
-  class CartCtrl {
+class CartCtrl {
   constructor(CartService) {
     this.CartService = CartService;
   }
@@ -18,7 +18,6 @@
     return this.CartService.total();
   }
   clearCart() {
-    console.log('from controller');
     return this.CartService.clearCart();
   }
   log() {

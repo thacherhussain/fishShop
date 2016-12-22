@@ -12,7 +12,7 @@
     "heroku-postbuild": "brunch build --production; knex migrate:latest",
     "knex": "knex",
     "nodemon": "nodemon server.js",
-    "lint": "eslint --ext .js --ignore-pattern public",
+    "lint": "eslint . --ext .js --ignore-pattern public --ignore-pattern _materialize-src",
     "start": "brunch watch --server"
   },
   "dependencies": {
