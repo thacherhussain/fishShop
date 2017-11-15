@@ -1,13 +1,14 @@
 http://fishshop.herokuapp.com
 
 This app uses:
-Node.js
-PostgreSQL
-Knex.js
-Express.js
-Angular JS
-Material Design
-Materialize CSS with Sass
+- Node.js
+- PostgreSQL / Knex.js
+- Express.js
+- Angular JS
+- Material Design
+- Materialize CSS with Sass
+
+Deployed to Heroku with continuous build updates
 
 ***Next Features for build out:***
 - Users Authentication/Authorization (with OAuth or Auth0)
