@@ -1,4 +1,6 @@
-http://fishshop.herokuapp.com
+#### Fish Shop / a basic shopping app
+
+http://fishshop.herokuapp.com 
 
 This app uses:
 - Node.js
